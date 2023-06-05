@@ -2,7 +2,7 @@
 namespace Account_tmp;
 class Account_tmp
 {
-    private int $GUID;
+    private string $GUID;
     private string $Password;
     private string $Salt;
 

@@ -30,3 +30,57 @@
 2023-06-04 19:57:11 - Connexion à la base de données
 2023-06-04 19:57:11 - Compte créé
 2023-06-04 19:57:11 - Connexion à la base de données
+2023-06-04 20:11:54 - Connexion à la base de données
+2023-06-04 20:11:54 - Connexion à la base de données
+2023-06-05 17:56:28 - Essai d'enregistrement
+2023-06-05 17:56:28 - Les mots de passe ne correspondent pas
+2023-06-05 19:02:26 - Essaie de connexion
+2023-06-05 19:02:26 - User::GetAccountByMail du compte [popop]
+2023-06-05 19:02:26 - Connexion à la base de données
+2023-06-05 19:02:26 - Pas de compte existant avec [popop]
+2023-06-05 19:02:31 - Essaie de connexion
+2023-06-05 19:02:31 - User::GetAccountByMail du compte [popopo]
+2023-06-05 19:02:31 - Connexion à la base de données
+2023-06-05 19:02:31 - Pas de compte existant avec [popopo]
+2023-06-05 19:07:23 - L'email n'est pas valide
+2023-06-05 19:07:33 - Les mots de passe ne correspondent pas
+2023-06-05 19:07:40 - Compte créé
+2023-06-05 19:07:40 - Connexion à la base de données
+2023-06-05 19:07:40 - Compte créé
+2023-06-05 19:07:40 - User::CreateUser du compte [potatoes-frites@hotmail.fr]
+2023-06-05 19:07:40 - Connexion à la base de données
+2023-06-05 20:37:06 - Compte créé
+2023-06-05 20:37:46 - Compte créé
+2023-06-05 20:38:34 - Compte créé
+2023-06-05 20:38:34 - Connexion à la base de données
+2023-06-05 20:38:34 - Compte créé
+2023-06-05 20:38:34 - User::CreateUser du compte [potatoes-frites@hotmail.fr]
+2023-06-05 20:38:34 - Connexion à la base de données
+2023-06-05 20:39:18 - Compte créé
+2023-06-05 20:39:18 - Connexion à la base de données
+2023-06-05 20:39:18 - Compte créé
+2023-06-05 20:39:18 - User::CreateUser du compte [potatoes-frites@hotmail.fr]
+2023-06-05 20:39:18 - Connexion à la base de données
+2023-06-05 20:39:25 - Compte créé
+2023-06-05 20:39:25 - Connexion à la base de données
+2023-06-05 20:39:25 - Compte créé
+2023-06-05 20:39:25 - User::CreateUser du compte [potatoes-frites@hotmail.fr]
+2023-06-05 20:39:25 - Connexion à la base de données
+2023-06-05 20:39:30 - Compte créé
+2023-06-05 20:39:30 - Connexion à la base de données
+2023-06-05 20:39:30 - Compte créé
+2023-06-05 20:39:30 - User::CreateUser du compte [potatoes-frites@hotmail.fr]
+2023-06-05 20:39:30 - Connexion à la base de données
+2023-06-05 20:44:31 - Compte créé
+2023-06-05 20:44:31 - Connexion à la base de données
+2023-06-05 20:44:31 - User::GetAccountByMail du compte [potatoes-frites@hotmail.fr]
+2023-06-05 20:44:31 - Connexion à la base de données
+2023-06-05 20:47:08 - Compte créé
+2023-06-05 20:47:08 - Connexion à la base de données
+2023-06-05 20:47:08 - User::GetAccountByMail du compte [potatoes-frites@hotmail.fr]
+2023-06-05 20:47:08 - Connexion à la base de données
+2023-06-05 20:52:21 - L'email n'est pas valide
+2023-06-05 20:52:25 - Compte créé
+2023-06-05 20:52:25 - Connexion à la base de données
+2023-06-05 20:52:25 - User::GetAccountByMail du compte [potatoes-frites@hotmail.fr]
+2023-06-05 20:52:25 - Connexion à la base de données

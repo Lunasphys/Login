@@ -5,7 +5,7 @@ namespace Application\Model\Account_attempts;
 
 class Account_attempts
 {
-    private int $GUID;
+    private string $GUID;
     private int $Time;
 
     public function __construct(int $GUID, int $Time)

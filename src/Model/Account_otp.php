@@ -4,7 +4,7 @@ namespace Account_otp;
 
 class Account_otp
 {
-    private int $GUID;
+    private string $GUID;
     private string $WebService;
 
     public function __construct(int $GUID, string $WebService)
