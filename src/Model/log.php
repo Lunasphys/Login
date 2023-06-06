@@ -2,7 +2,7 @@
 
 namespace Log;
 
-class Log {
+class log {
     private string $message;
     private string $date;
 

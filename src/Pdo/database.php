@@ -2,13 +2,13 @@
 
     namespace Database;
 
-    use Log\Log;
+    use Log\log;
     use Exception;
     use PDO;
     use PDOException;
 
 
-    class Database
+    class database
     {
         private ?PDO $connection = null;
 
@@ -25,7 +25,7 @@
          */
         private function connect()
     {
-        new Log("Connexion à la base de données");
+        new log("Connexion à la base de données");
 
         try {
             $this->connection = new PDO('mysql:host=localhost;dbname=login;charset=utf8', 'root', '');

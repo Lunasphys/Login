@@ -1,7 +1,6 @@
 // Fonction affiche otp dans pop up
 
-function showOTP(otp)
-{
+function showOTP(otp) {
     let popUpOTP = document.createElement("div");
     popUpOTP.classList.add("popUpOTP");
     popUpOTP.innerHTML = `
@@ -14,8 +13,6 @@ function showOTP(otp)
     document.body.appendChild(popUpOTP);
     document.body.classList.add("popUp-open");
 }
-
-showOTP(${otp});
 
 function closePopUpOTP() {
     let popUpOTP = document.querySelector(".popUpOTP");

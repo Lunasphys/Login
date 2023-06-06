@@ -3,7 +3,7 @@
 namespace Account_attempts;
 
 
-class Account_attempts
+class account_attempts
 {
     private string $guid;
     private int $attempt_at;

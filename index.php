@@ -2,24 +2,24 @@
 
 
 
-require_once 'src/Pdo/Database.php';
-require_once 'src/Model/Log.php';
-require_once 'src/Model/Account.php';
-require_once 'src/Model/Users.php';
-require_once 'src/Controller/SignUp.php';
+require_once 'src/Pdo/database.php';
+require_once 'src/Model/log.php';
+require_once 'src/Model/account.php';
+require_once 'src/Model/users.php';
+require_once 'src/Controller/signUp.php';
 
 
-use Database\Database;
-use Account\Account;
-use Log\Log;
-use Users\Users;
+use Database\database;
+use Account\account;
+use Log\log;
+use SignUp\signUp;
+use Users\users;
 
 
-use SignUp\SignUp;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
-        SignUp::execute();
+        signUp::execute();
     } catch (Exception $e) {
         echo "Une erreur s'est produite : " . $e->getMessage();
     }

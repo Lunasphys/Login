@@ -1,8 +1,8 @@
 <?php
 
-namespace Account_tmp;
+namespace Account_authorization;
 
-class Account_Authorization
+class account_authorization
 {
     private string $guid;
     private string $web_service;

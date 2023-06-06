@@ -1,0 +1,206 @@
+2023-06-06 18:17:24 - L'email n'est pas valide
+2023-06-06 18:17:32 - Les mots de passe ne correspondent pas
+2023-06-06 18:17:36 - Construction en cours
+2023-06-06 18:17:36 - Connexion à la base de données
+2023-06-06 18:17:36 - User::GetAccountByMail du compte [potatoes-frites@hotmail.fr]
+2023-06-06 18:17:36 - Connexion à la base de données
+2023-06-06 18:17:36 - Utilisateur créé
+2023-06-06 18:17:46 - Construction en cours
+2023-06-06 18:17:46 - Connexion à la base de données
+2023-06-06 18:17:46 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 18:17:46 - Connexion à la base de données
+2023-06-06 18:17:46 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 18:17:46 - Construction en cours
+2023-06-06 18:24:51 - Construction en cours
+2023-06-06 18:24:51 - Connexion à la base de données
+2023-06-06 18:24:51 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 18:24:51 - Connexion à la base de données
+2023-06-06 18:24:51 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 18:24:51 - Construction en cours
+2023-06-06 18:31:33 - Construction en cours
+2023-06-06 18:31:33 - Connexion à la base de données
+2023-06-06 18:31:33 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 18:31:33 - Connexion à la base de données
+2023-06-06 18:31:33 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 18:31:33 - Construction en cours
+2023-06-06 18:36:34 - Construction en cours
+2023-06-06 18:36:34 - Connexion à la base de données
+2023-06-06 18:36:34 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 18:36:34 - Connexion à la base de données
+2023-06-06 18:36:34 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 18:36:34 - Construction en cours
+2023-06-06 19:16:14 - L'email n'est pas valide
+2023-06-06 19:16:18 - Construction en cours
+2023-06-06 19:16:18 - Connexion à la base de données
+2023-06-06 19:16:18 - User::GetAccountByMail du compte [potatoes-frites@hotmail.fr]
+2023-06-06 19:16:18 - Connexion à la base de données
+2023-06-06 19:16:18 - Utilisateur créé
+2023-06-06 19:16:28 - Construction en cours
+2023-06-06 19:16:28 - Connexion à la base de données
+2023-06-06 19:16:28 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 19:16:28 - Connexion à la base de données
+2023-06-06 19:16:28 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 19:16:28 - Construction en cours
+2023-06-06 19:17:20 - Construction en cours
+2023-06-06 19:17:20 - Connexion à la base de données
+2023-06-06 19:17:20 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 19:17:20 - Connexion à la base de données
+2023-06-06 19:17:20 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 19:17:20 - Construction en cours
+2023-06-06 19:22:36 - Construction en cours
+2023-06-06 19:22:36 - Connexion à la base de données
+2023-06-06 19:22:36 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 19:22:36 - Connexion à la base de données
+2023-06-06 19:22:36 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 19:22:36 - Construction en cours
+2023-06-06 19:30:01 - Construction en cours
+2023-06-06 19:30:01 - Connexion à la base de données
+2023-06-06 19:30:01 - User::GetAccountByMail du compte [potatoes-frites@hotmail.fr]
+2023-06-06 19:30:01 - Connexion à la base de données
+2023-06-06 19:30:01 - Utilisateur créé
+2023-06-06 19:30:11 - Construction en cours
+2023-06-06 19:30:11 - Connexion à la base de données
+2023-06-06 19:30:11 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 19:30:11 - Connexion à la base de données
+2023-06-06 19:30:11 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 19:30:11 - Construction en cours
+2023-06-06 19:31:04 - L'email n'est pas valide
+2023-06-06 19:31:07 - Construction en cours
+2023-06-06 19:31:07 - Connexion à la base de données
+2023-06-06 19:31:07 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 19:31:07 - Connexion à la base de données
+2023-06-06 19:31:07 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 19:31:07 - Construction en cours
+2023-06-06 19:36:33 - Construction en cours
+2023-06-06 19:36:33 - Connexion à la base de données
+2023-06-06 19:36:33 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 19:36:33 - Connexion à la base de données
+2023-06-06 19:36:33 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 19:36:33 - Construction en cours
+2023-06-06 19:38:20 - Construction en cours
+2023-06-06 19:38:20 - Connexion à la base de données
+2023-06-06 19:38:20 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 19:38:20 - Connexion à la base de données
+2023-06-06 19:38:20 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 19:38:20 - Construction en cours
+2023-06-06 19:38:24 - Construction en cours
+2023-06-06 19:38:24 - Connexion à la base de données
+2023-06-06 19:38:24 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 19:38:24 - Connexion à la base de données
+2023-06-06 19:38:24 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 19:38:24 - Construction en cours
+2023-06-06 19:48:02 - Construction en cours
+2023-06-06 19:48:02 - Connexion à la base de données
+2023-06-06 19:48:02 - User::GetAccountByMail du compte [potatoes-frites@hotmail.fr]
+2023-06-06 19:48:02 - Connexion à la base de données
+2023-06-06 19:48:02 - Utilisateur créé
+2023-06-06 19:48:08 - Construction en cours
+2023-06-06 19:48:08 - Connexion à la base de données
+2023-06-06 19:48:08 - User::GetAccountByMail du compte [Laurie.jeham@Hotmail.fr]
+2023-06-06 19:48:08 - Connexion à la base de données
+2023-06-06 19:48:08 - Utilisateur créé
+2023-06-06 19:48:14 - Construction en cours
+2023-06-06 19:48:14 - Connexion à la base de données
+2023-06-06 19:48:14 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 19:48:14 - Connexion à la base de données
+2023-06-06 19:48:14 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 19:48:14 - Construction en cours
+2023-06-06 19:55:48 - Construction en cours
+2023-06-06 19:55:48 - Connexion à la base de données
+2023-06-06 19:55:48 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 19:55:48 - Connexion à la base de données
+2023-06-06 19:55:48 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 19:55:48 - Construction en cours
+2023-06-06 19:55:57 - Construction en cours
+2023-06-06 19:55:57 - Connexion à la base de données
+2023-06-06 19:55:57 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 19:55:57 - Connexion à la base de données
+2023-06-06 19:55:57 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 19:55:57 - Construction en cours
+2023-06-06 19:56:27 - Construction en cours
+2023-06-06 19:56:27 - Connexion à la base de données
+2023-06-06 19:56:27 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 19:56:27 - Connexion à la base de données
+2023-06-06 19:56:27 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 19:56:27 - Construction en cours
+2023-06-06 19:56:36 - Construction en cours
+2023-06-06 19:56:36 - Connexion à la base de données
+2023-06-06 19:56:36 - User::GetAccountByMail du compte [potatoes-frites@hotmail.fr]
+2023-06-06 19:56:36 - Connexion à la base de données
+2023-06-06 19:56:36 - Utilisateur créé
+2023-06-06 19:56:42 - Construction en cours
+2023-06-06 19:56:42 - Connexion à la base de données
+2023-06-06 19:56:42 - User::GetAccountByMail du compte [potatoes-frites@hotmail.fr]
+2023-06-06 19:56:42 - Connexion à la base de données
+2023-06-06 19:56:42 - Utilisateur créé
+2023-06-06 19:56:48 - Construction en cours
+2023-06-06 19:56:48 - Connexion à la base de données
+2023-06-06 19:56:48 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 19:56:48 - Connexion à la base de données
+2023-06-06 19:56:48 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 19:56:48 - Construction en cours
+2023-06-06 19:57:56 - Construction en cours
+2023-06-06 19:57:56 - Connexion à la base de données
+2023-06-06 19:57:56 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 19:57:56 - Connexion à la base de données
+2023-06-06 19:57:56 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 19:57:56 - Construction en cours
+2023-06-06 19:57:56 - Le compte va se créer dans la table accounttmp
+2023-06-06 20:21:04 - Construction en cours
+2023-06-06 20:21:04 - Connexion à la base de données
+2023-06-06 20:21:04 - User::GetAccountByMail du compte [Laurie.jeham@Hotmail.fr]
+2023-06-06 20:21:04 - Connexion à la base de données
+2023-06-06 20:21:04 - Utilisateur créé
+2023-06-06 20:21:09 - Construction en cours
+2023-06-06 20:21:09 - Connexion à la base de données
+2023-06-06 20:21:09 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 20:21:09 - Connexion à la base de données
+2023-06-06 20:21:09 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 20:21:09 - Construction en cours
+2023-06-06 20:21:09 - Le compte va se créer dans la table accounttmp
+2023-06-06 20:24:43 - Construction en cours
+2023-06-06 20:24:43 - Connexion à la base de données
+2023-06-06 20:24:43 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 20:24:43 - Connexion à la base de données
+2023-06-06 20:24:43 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 20:24:43 - Construction en cours
+2023-06-06 20:24:43 - Le compte va se créer dans la table accounttmp
+2023-06-06 20:27:42 - Construction en cours
+2023-06-06 20:27:42 - Connexion à la base de données
+2023-06-06 20:27:42 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 20:27:42 - Connexion à la base de données
+2023-06-06 20:27:42 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 20:27:42 - Construction en cours
+2023-06-06 20:27:42 - Le compte va se créer dans la table accounttmp
+2023-06-06 20:31:48 - Construction en cours
+2023-06-06 20:31:48 - Connexion à la base de données
+2023-06-06 20:31:48 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 20:31:48 - Connexion à la base de données
+2023-06-06 20:31:48 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 20:31:48 - Construction en cours
+2023-06-06 20:31:48 - Le compte va se créer dans la table accounttmp
+2023-06-06 20:45:20 - Construction en cours
+2023-06-06 20:45:20 - Connexion à la base de données
+2023-06-06 20:45:20 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 20:45:20 - Connexion à la base de données
+2023-06-06 20:45:20 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 20:45:20 - Construction en cours
+2023-06-06 20:45:20 - Le compte va se créer dans la table accounttmp
+2023-06-06 20:49:39 - Construction en cours
+2023-06-06 20:49:39 - Connexion à la base de données
+2023-06-06 20:49:39 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 20:49:39 - Connexion à la base de données
+2023-06-06 20:49:39 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 20:49:39 - Le compte va se créer dans la table accounttmp
+2023-06-06 21:00:43 - Construction en cours
+2023-06-06 21:00:43 - Connexion à la base de données
+2023-06-06 21:00:43 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 21:00:43 - Connexion à la base de données
+2023-06-06 21:00:43 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 21:00:43 - Le compte va se créer dans la table accounttmp
+2023-06-06 21:15:42 - Construction en cours
+2023-06-06 21:15:42 - Connexion à la base de données
+2023-06-06 21:15:42 - User::GetAccountByMail du compte [lauriejeham@gmail.com]
+2023-06-06 21:15:42 - Connexion à la base de données
+2023-06-06 21:15:42 - Pas de compte existant avec [lauriejeham@gmail.com]
+2023-06-06 21:15:42 - Le compte va se créer dans la table accounttmp

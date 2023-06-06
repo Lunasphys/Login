@@ -2,7 +2,7 @@
 
 namespace Public_Authorization;
 
-class Public_Authorization
+class public_Authorization
 {
     private int $id;
     private string $web_service;

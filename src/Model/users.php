@@ -2,11 +2,11 @@
 
 namespace Users;
 
-use Log\Log;
-use Database\Database;
+use Log\log;
+use Database\database;
 use Exception;
 
-Class Users
+Class users
 {
     // Variable
     private string $guid;
@@ -17,31 +17,24 @@ Class Users
     {
         $this->guid = $guid;
         $this->email = $email;
-        new Log ("Utilisateur créé");
-    }
-
-    // Main fonction
-
-    public function getMail(): string
-    {
-        return $this->email;
+        new log ("Utilisateur créé");
     }
 
     /**
      * @throws Exception
      */
-    public static function GetAccountById(): Users
+    public static function GetAccountById(string $guid): users
     {
         // Récupère le guid et le met dans account
 
-        new Log ("User::GetAccountById du compte [" . 'email' . "]");
+        new log ("User::GetAccountById du compte [" . $guid . "]");
 
         $query = "SELECT * FROM users WHERE guid = :guid";
-        $statement = (new Database())->getConnection()->prepare($query);
+        $statement = (new database())->getConnection()->prepare($query);
 
         if ($statement === false) {
-            new Log ("user::GetAccountById du compte [" . 'email'. "]");
-            throw new Exception("Erreur Database");
+            new log ("user::GetAccountById du compte [" . $guid . "]");
+            throw new Exception("Erreur database");
         }
 
         $statement->bindParam(':guid', $guid);
@@ -49,7 +42,7 @@ Class Users
         $result = $statement->fetch();
 
         if ($result) {
-            return new Users($result['guid'], $result['email']);
+            return new users($result['guid'], $result['email']);
         } else {
             throw new Exception("erreur de fetch");
         }
@@ -63,14 +56,14 @@ Class Users
 
         // Permet de récupérer le compte par son email
 
-        new Log ("User::GetAccountByMail du compte [" . $email . "]");
+        new log ("User::GetAccountByMail du compte [" . $email . "]");
 
         $query = "SELECT * FROM users WHERE email = :email";
-        $statement = (new Database())->getConnection()->prepare($query);
+        $statement = (new database())->getConnection()->prepare($query);
 
         if ($statement === false) {
-            new Log ("Users::GetAccountByMail du compte [" . $email . "]");
-            throw new Exception("Erreur Database");
+            new log ("users::GetAccountByMail du compte [" . $email . "]");
+            throw new Exception("Erreur database");
         }
 
         $statement->bindParam(':email', $email);
@@ -80,9 +73,9 @@ Class Users
         // Si le compte existe, on le retourne, sinon on retourne null
 
         if ($result) {
-            return new Users($result['email'], $result['guid']);
+            return new users($result['email'], $result['guid']);
         } else {
-            new Log ("Pas de compte existant avec [" . $email . "]");
+            new log ("Pas de compte existant avec [" . $email . "]");
             return null;
         }
     }
@@ -91,16 +84,16 @@ Class Users
     {
         // Permet de créer une table users
 
-        new Log ("User::CreateUser du compte [" . $email . "]");
+        new log ("User::CreateUser du compte [" . $email . "]");
         $query = "INSERT INTO users (guid, email) VALUES (:guid, :email)";
-        $statement = (new Database())->getConnection()->prepare($query);
+        $statement = (new database())->getConnection()->prepare($query);
 
 
         // Si la requête ne fonctionne pas, on retourne une erreur
 
         if ($statement === false) {
-            new Log ("User::CreateUser du compte [" . $email . "]");
-            throw new Exception("Erreur Database");
+            new log ("User::CreateUser du compte [" . $email . "]");
+            throw new Exception("Erreur database");
         }
 
         $statement->bindParam(':guid', $guid);

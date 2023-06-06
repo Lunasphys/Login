@@ -1,14 +1,15 @@
 <?php
 namespace Account;
 
-use Database\Database;
+
+use Database\database;
 use Exception;
-use Log\Log;
-use Users\Users;
-use Account_otp\Account_otp;
+use Log\log;
+use Users\users;
+use Account_otp\account_otp;
 
 
-class Account {
+class account {
     // Variable
     private string $guid;
     private string $password;
@@ -20,13 +21,14 @@ class Account {
         $this->guid = $guid;
         $this->password = $password;
         $this->salt = $salt;
-        new Log ("Compte créé");
+        new log ("Construction en cours");
     }
 
     //Récupère le guid et le met dans account
 
-    public function getGUID(): string {
-        return $this->guid;
+    public static function getGUID(): string {
+        $guid = uniqid(32);
+        return $guid;
     }
 
 
@@ -42,10 +44,18 @@ class Account {
         return ['password' => $hashedPassword, 'salt' => $salt];
     }
 
-    public static function createAccount(string $guid, string $password, string $salt) {
+    /**
+     * @throws Exception
+     */
+    public static function createAccount() : bool
+    {
 
-            $db = new Database();
+            $db = new database();
             $db->testConnection();
+
+            // Génère le GUID unique
+
+
 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $email = $_POST['email'];
@@ -53,29 +63,25 @@ class Account {
 
                 // Vérifie si l'email existe déjà dans la base de données
 
-                $existingUser = Users::GetAccountByMail($email);
+                $existingUser = users::GetAccountByMail($email);
                 if ($existingUser) {
                     echo "Cet email est déjà utilisé.";
-                    return;
+                    return false ;
                 }
 
-                // Génère le GUID unique
 
-                $guid = uniqid();
-
-                // Crée un objet Account
-
-                $account = new Account($guid, $password, '');
 
                 // Sale le mot de passe
 
-                $result = $account->SaltPwd($password);
+                $result = self::SaltPwd($password);
                 $hashedPassword = $result['password'];
                 $salt = $result['salt'];
 
                 // Autres opérations avec le mot de passe hashé...
 
                 echo "Youhou mot de passe salé : " . $hashedPassword;
+
+                $guid = self::getGUID();
 
                 // Coconnexion bdd
 
@@ -84,32 +90,32 @@ class Account {
                 } catch (Exception $e) {
                     // Erreur de coconnexion
                 }
+                echo "je suis là";
 
-                // Insère les autres données dans la table accounttmp
+                new log ("Le compte va se créer dans la table accounttmp");
 
-                $stmtTmp = $link->prepare("INSERT INTO accounttmp (guid, pwd, salt) VALUES (?, ?, ?)");
-                $stmtTmp->bindParam(1, $guid);
-                $stmtTmp->bindParam(2, $hashedPassword);
-                $stmtTmp->bindParam(3, $salt);
-                $stmtTmp->execute();
-                $stmtTmp->closeCursor();
+                $stmt = $db->getConnection()->prepare("INSERT INTO `accounttmp` (guid, password, salt) VALUES (?, ?, ?)");
+                $stmt->bindValue(1, $guid);
+                $stmt->bindValue(2, $password);
+                $stmt->bindValue(3, $salt);
+                $stmt->execute();
+
+                echo "Compte créé dans tmp";
 
 
                 // Génère un OTP et une validité pour celui-ci
 
-                $otp = Account_otp::generateOTP(8);
+                $otp = account_otp::generateOTP(8);
 
                 $validity = date('Y-m-d H:i:s', strtotime('+1 MINUTE'));
 
                 // Enregistre l'OTP dans la table accountotp puis vérifie sa confirmation
 
+                account_otp::createOTP($guid, $otp, $validity);
 
+                // Insère l'email dans la table users en utilisant la méthode CreateUser
 
-                Account_otp::createOTP($guid, $otp, $validity);
-
-                // Insère l'email dans la table Users en utilisant la méthode CreateUser
-
-                Users::CreateUser($guid, $email);
+                users::CreateUser($guid, $email);
 
 
                 // Insère les autres données dans la table account
@@ -126,9 +132,10 @@ class Account {
                 $link = null;
 
                 echo "Nouveaux enregistrements créés avec succès.";
+                return true;
+
         }
-
-
+        return false;
     }
 
     public static function comparePassword(string $password, string $hashedPassword, string $salt): bool
@@ -146,17 +153,17 @@ class Account {
         }
     }
 
-    public static function connexion(string $email, string $password, string $hashedPassword, string $salt): ?Users
+    public static function connexion(string $email, string $password, string $hashedPassword, string $salt): ?users
     {
-        new Log("Connexion de l'utilisateur" . $email);
+        new log("Connexion de l'utilisateur" . $email);
 
         // Récupère le compte en fonction de l'email
 
-        $account = Users::GetAccountByMail($email);
+        $account = users::GetAccountByMail($email);
 
         // Va comparer les mots de passe et retourner la page connectée si l'association est bonne
 
-        if (!Account::comparePassword($password, $hashedPassword, $salt)) {
+        if (!account::comparePassword($password, $hashedPassword, $salt)) {
             return null;
         }
         else
@@ -167,12 +174,12 @@ class Account {
 
     public static function confirmOTP(string $guid, string $otp) {
 
-        $db = new Database();
+        $db = new database();
         $db->testConnection();
 
         // Vérifie si l'OTP reçu concorde bien avec celui rentré par l'utilisateur
 
-        $stmt = $db->getConnection()->prepare("SELECT ao.otp, ao.validity, u.email FROM accountotp AS ao
+        $stmt = $db->getConnection()->prepare("SELECT ao.guid, ao.otp, ao.validity FROM accountotp AS ao
                 INNER JOIN users AS u ON ao.guid = u.guid
                 WHERE ao.otp = ?");
         $stmt->bindValue(1, $otp);
@@ -190,13 +197,13 @@ class Account {
             {
                 // Si toujours valide alors crée l'OTP et la validité dans la table accountotp
 
-                new Log("OTP confirmé");
+                new log("OTP confirmé");
                 echo "OTP confirmé";
-                Account_otp::createOTP($guid, $otp, $result['validity']);
+                account_otp::createOTP($guid, $otp, $result['validity']);
 
                 // Donne les droits à l'utilisateur
 
-                $stmtAccount = $db->getConnection()->prepare("INSERT INTO account (guid, password, salt) SELECT guid, pwd, salt FROM accounttmp WHERE guid = ?");
+                $stmtAccount = $db->getConnection()->prepare("INSERT INTO account (guid, password, salt) SELECT guid, password, salt FROM accounttmp WHERE guid = ?");
                 $stmtAccount->bindValue(1, $guid);
                 $stmtAccount->execute();
 

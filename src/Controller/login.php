@@ -2,13 +2,13 @@
 
 namespace Login;
 
-use Database\Database;
+use Database\database;
 use Exception;
-use Users\Users;
-use Account\Account;
-use Log\Log;
+use Users\users;
+use Account\account;
+use Log\log;
 
-class Login
+class login
 {
     /**
      * @throws Exception
@@ -22,18 +22,18 @@ class Login
 
             $email = $_POST['email'];
             $password = $_POST['password'];
-            $hashedPassword = Account::SaltPwd($password)['password'];
-            $salt = Account::SaltPwd($password)['salt'];
+            $hashedPassword = account::SaltPwd($password)['password'];
+            $salt = account::SaltPwd($password)['salt'];
 
             // Verification que l'email soit bien un email et qu'il ne soit pas vide
 
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                new Log("L'email n'est pas valide");
+                new log("L'email n'est pas valide");
                 throw new Exception("L'email n'est pas valide, veuillez rentrer un vrai email");
             }
 
 
-            $acc = Account::connexion($email, $password, $hashedPassword, $salt);
+            $acc = account::connexion($email, $password, $hashedPassword, $salt);
 
             if ($acc !== null) {
                 echo "Vous êtes connecté";

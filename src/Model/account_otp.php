@@ -2,9 +2,9 @@
 
 namespace Account_otp;
 
-use Database\Database;
+use Database\database;
 
-class Account_otp
+class account_otp
 {
     private string $guid;
     private string $otp;
@@ -15,7 +15,7 @@ class Account_otp
     {
         // Rentre l'OTP, le guid et la validité dans la base de données
 
-        $db = new Database();
+        $db = new database();
         $db->testConnection();
 
         // Converti validity en un format approprié pour la base de donnée
