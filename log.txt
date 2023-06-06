@@ -84,3 +84,11 @@
 2023-06-05 20:52:25 - Connexion à la base de données
 2023-06-05 20:52:25 - User::GetAccountByMail du compte [potatoes-frites@hotmail.fr]
 2023-06-05 20:52:25 - Connexion à la base de données
+2023-06-06 10:27:36 - L'email n'est pas valide
+2023-06-06 10:27:42 - Les mots de passe ne correspondent pas
+2023-06-06 10:27:48 - Compte créé
+2023-06-06 10:27:48 - Connexion à la base de données
+2023-06-06 10:27:48 - User::GetAccountByMail du compte [laurie.jeham@ynov.com]
+2023-06-06 10:27:48 - Connexion à la base de données
+2023-06-06 10:27:48 - Pas de compte existant avec [laurie.jeham@ynov.com]
+2023-06-06 10:27:48 - Compte créé

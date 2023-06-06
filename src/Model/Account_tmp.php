@@ -2,15 +2,15 @@
 namespace Account_tmp;
 class Account_tmp
 {
-    private string $GUID;
-    private string $Password;
-    private string $Salt;
+    private string $guid;
+    private string $password;
+    private string $salt;
 
-    public function __construct(int $GUID, string $Password, string $Salt)
+    public function __construct(int $guid, string $password, string $salt)
     {
-        $this->GUID = $GUID;
-        $this->Password = $Password;
-        $this->Salt = $Salt;
+        $this->guid = $guid;
+        $this->password = $password;
+        $this->Salt = $salt;
     }
 
 

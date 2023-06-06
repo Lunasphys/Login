@@ -37,7 +37,7 @@ class Login
 
             if ($acc !== null) {
                 echo "Vous êtes connecté";
-                $_SESSION['GUID'] = $acc->GetAccountById();
+                $_SESSION['guid'] = $acc->GetAccountById();
                 header('Location: /');
             } else {
                 echo "Vous n'êtes pas connecté, email et mdp ne matchent pas";

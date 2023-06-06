@@ -4,6 +4,7 @@ namespace Public_Authorization;
 
 class Public_Authorization
 {
+    private int $id;
     private string $Web_Service;
 
     public function __construct(string $Web_Service)

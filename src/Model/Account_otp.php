@@ -4,17 +4,17 @@ namespace Account_otp;
 
 class Account_otp
 {
-    private string $GUID;
+    private string $guid;
     private string $WebService;
 
-    public function __construct(int $GUID, string $WebService)
+    public function __construct(int $guid, string $WebService)
     {
-        $this->GUID = $GUID;
+        $this->guid = $guid;
         $this->WebService = $WebService;
     }
 
     public function get_guid(): int
     {
-        return $this->GUID;
+        return $this->guid;
     }
 }

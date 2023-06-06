@@ -5,18 +5,18 @@ namespace Application\Model\Account_attempts;
 
 class Account_attempts
 {
-    private string $GUID;
+    private string $guid;
     private int $Time;
 
-    public function __construct(int $GUID, int $Time)
+    public function __construct(int $guid, int $Time)
     {
-        $this->GUID = $GUID;
+        $this->guid = $guid;
         $this->Time = $Time;
     }
 
     public function get_guid(): int
     {
-        return $this->GUID;
+        return $this->guid;
     }
 
     public function get_attempt(): int
@@ -24,8 +24,8 @@ class Account_attempts
         return $this->Time;
     }
 
-    public function set_GUID(int $GUID): void
+    public function set_GUID(int $guid): void
     {
-        $this->GUID = $GUID;
+        $this->GUID = $guid;
     }
 }

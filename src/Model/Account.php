@@ -5,21 +5,20 @@ use Database\Database;
 use Exception;
 use Log\Log;
 use Users\Users;
-use function Sodium\compare;
 
 
 class Account {
     // Variable
-    private string $GUID;
-    private string $Password;
-    private string $Salt;
+    private string $guid;
+    private string $password;
+    private string $salt;
 
     // Constructor
 
-    public function __construct(string $GUID, string $Password, string $Salt) {
-        $this->GUID = $GUID;
-        $this->Password = $Password;
-        $this->Salt = $Salt;
+    public function __construct(string $guid, string $password, string $salt) {
+        $this->guid = $guid;
+        $this->password = $password;
+        $this->salt = $salt;
         new Log ("Compte créé");
     }
 
@@ -27,17 +26,19 @@ class Account {
     //Récupère le guid et le met dans account
 
     public function getGUID(): string {
-        return $this->GUID;
+        return $this->guid;
     }
-    public  static function SaltPwd(string $Password): array {
+
+
+    public  static function SaltPwd(string $password): array {
         // Génère un sel aléatoire
         $salt = random_bytes(32);
         // Hash le mot de passe avec le sel
-        $hashedPassword = hash('sha512', $Password . $salt);
+        $hashedPassword = hash('sha512', $password . $salt);
         return ['password' => $hashedPassword, 'salt' => $salt];
     }
 
-    public static function createAccount(string $GUID, string $Password, string $Salt) {
+    public static function createAccount(string $guid, string $password, string $salt) {
 
             $db = new Database();
             $db->testConnection();
@@ -56,15 +57,15 @@ class Account {
 
                 // Génère le GUID unique
 
-                $generatedGUID = uniqid();
+                $guid = uniqid();
 
                 // Crée un objet Account
 
-                $account = new Account($generatedGUID, $Password, '');
+                $account = new Account($guid, $password, '');
 
                 // Sale le mot de passe
 
-                $result = $account->SaltPwd($Password);
+                $result = $account->SaltPwd($password);
                 $hashedPassword = $result['password'];
                 $salt = $result['salt'];
 
@@ -81,13 +82,13 @@ class Account {
 
                 // Insère l'email dans la table Users en utilisant la méthode CreateUser
 
-                Users::CreateUser($generatedGUID, $Email);
+                Users::CreateUser($guid, $email);
 
 
                 // Insère les autres données dans la table account
 
-                $stmt1 = $link->prepare("INSERT INTO account (GUID, Password, Salt) VALUES (?, ?, ?)");
-                $stmt1->bindParam(1, $generatedGUID);
+                $stmt1 = $link->prepare("INSERT INTO account (guid, password, salt) VALUES (?, ?, ?)");
+                $stmt1->bindParam(1, $guid);
                 $stmt1->bindParam(2, $hashedPassword);
                 $stmt1->bindParam(3, $salt);
                 $stmt1->execute();
