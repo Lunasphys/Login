@@ -5,12 +5,12 @@ namespace Account_tmp;
 class Account_Authorization
 {
     private string $guid;
-    private string $WebService;
+    private string $web_service;
 
-    public function __construct(int $guid, string $WebService)
+    public function __construct(int $guid, string $web_service)
     {
         $this->guid = $guid;
-        $this->WebService = $WebService;
+        $this->web_service = $web_service;
     }
 
     public function get_user_id(): int

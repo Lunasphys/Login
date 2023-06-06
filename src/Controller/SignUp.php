@@ -23,7 +23,6 @@ class SignUp
             $password = $_POST['password'];
             $passwordConfirmation = $_POST['password2'];
 
-
             // Verification que l'email soit bien un email et qu'il ne soit pas vide
 
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -54,6 +53,7 @@ class SignUp
             echo "Youhou mot de passe salé : " . $hashedPassword;
 
             // Appel de la méthode createAccount pour créer le compte
+
             $account->createAccount($email, $hashedPassword, $salt);
 
             echo "Nouveaux enregistrements créés avec succès.";

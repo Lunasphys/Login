@@ -22,11 +22,18 @@ Class Users
 
     // Main fonction
 
+    public function getMail(): string
+    {
+        return $this->email;
+    }
+
     /**
      * @throws Exception
      */
     public static function GetAccountById(): Users
     {
+        // Récupère le guid et le met dans account
+
         new Log ("User::GetAccountById du compte [" . 'email' . "]");
 
         $query = "SELECT * FROM users WHERE guid = :guid";
@@ -37,7 +44,7 @@ Class Users
             throw new Exception("Erreur Database");
         }
 
-        $statement->bindParam(':guid', $guid);  // Corrigé ici
+        $statement->bindParam(':guid', $guid);
         $statement->execute();
         $result = $statement->fetch();
 
@@ -53,6 +60,9 @@ Class Users
      */
     public static function GetAccountByMail(string $email): ?users
     {
+
+        // Permet de récupérer le compte par son email
+
         new Log ("User::GetAccountByMail du compte [" . $email . "]");
 
         $query = "SELECT * FROM users WHERE email = :email";
@@ -63,9 +73,11 @@ Class Users
             throw new Exception("Erreur Database");
         }
 
-        $statement->bindParam(':email', $Email);
+        $statement->bindParam(':email', $email);
         $statement->execute();
         $result = $statement->fetch();
+
+        // Si le compte existe, on le retourne, sinon on retourne null
 
         if ($result) {
             return new Users($result['email'], $result['guid']);
@@ -77,9 +89,14 @@ Class Users
 
     public static function CreateUser(string $guid, string $email)
     {
+        // Permet de créer une table users
+
         new Log ("User::CreateUser du compte [" . $email . "]");
         $query = "INSERT INTO users (guid, email) VALUES (:guid, :email)";
         $statement = (new Database())->getConnection()->prepare($query);
+
+
+        // Si la requête ne fonctionne pas, on retourne une erreur
 
         if ($statement === false) {
             new Log ("User::CreateUser du compte [" . $email . "]");

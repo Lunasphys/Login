@@ -32,6 +32,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="fr">
 <head>
     <title>Inscription</title>
+    <script src="src/Script/PopUpOTP.js"></script>
+    <link href="src/Style/PoPUpOTP.css"></link>
 </head>
 
 <body>

@@ -5,15 +5,16 @@ namespace Public_Authorization;
 class Public_Authorization
 {
     private int $id;
-    private string $Web_Service;
+    private string $web_service;
 
-    public function __construct(string $Web_Service)
+    public function __construct(int $id, string $web_service)
     {
-        $this->Web_Service = $Web_Service;
+        $this->id = $id;
+        $this->web_service = $web_service;
     }
 
     public function get_Web_Service(): string
     {
-        return $this->Web_Service;
+        return $this->web_service;
     }
 }

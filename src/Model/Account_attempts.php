@@ -1,17 +1,17 @@
 <?php
 
-namespace Application\Model\Account_attempts;
+namespace Account_attempts;
 
 
 class Account_attempts
 {
     private string $guid;
-    private int $Time;
+    private int $attempt_at;
 
-    public function __construct(int $guid, int $Time)
+    public function __construct(int $guid, int $attempt_at)
     {
         $this->guid = $guid;
-        $this->Time = $Time;
+        $this->attempt_at = $attempt_at;
     }
 
     public function get_guid(): int
@@ -21,11 +21,8 @@ class Account_attempts
 
     public function get_attempt(): int
     {
-        return $this->Time;
+        return $this->attempt_at;
     }
 
-    public function set_GUID(int $guid): void
-    {
-        $this->GUID = $guid;
-    }
+
 }
