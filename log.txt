@@ -204,3 +204,351 @@
 2023-06-06 21:15:42 - Connexion à la base de données
 2023-06-06 21:15:42 - Pas de compte existant avec [lauriejeham@gmail.com]
 2023-06-06 21:15:42 - Le compte va se créer dans la table accounttmp
+2023-06-07 06:54:00 - Construction en cours
+2023-06-07 06:54:00 - Connexion à la base de données
+2023-06-07 06:54:00 - User::GetAccountByMail du compte [nathalie.pascal-racine@cegetel.net]
+2023-06-07 06:54:00 - Connexion à la base de données
+2023-06-07 06:54:00 - Pas de compte existant avec [nathalie.pascal-racine@cegetel.net]
+2023-06-07 06:54:00 - Le compte va se créer dans la table accounttmp
+2023-06-07 07:19:44 - User::CreateUser du compte [laurie.jeham@ynov.com]
+2023-06-07 07:19:44 - Connexion à la base de données
+2023-06-07 07:19:44 - Connexion à la base de données
+2023-06-07 07:19:44 - User::GetAccountByMail du compte [laurie.jeham@ynov.com]
+2023-06-07 07:19:44 - Connexion à la base de données
+2023-06-07 07:19:44 - Utilisateur créé
+2023-06-07 07:21:06 - User::CreateUser du compte [laurie.jeham@ynov.com]
+2023-06-07 07:21:06 - Connexion à la base de données
+2023-06-07 07:26:26 - Connexion à la base de données
+2023-06-07 07:26:26 - User::GetAccountByMail du compte [laurie.jeham@ynov.com]
+2023-06-07 07:26:26 - Connexion à la base de données
+2023-06-07 07:26:26 - Utilisateur créé
+2023-06-07 07:35:17 - Connexion à la base de données
+2023-06-07 07:35:17 - User::GetAccountByMail du compte [laurie.jeham@ynov.com]
+2023-06-07 07:35:17 - Connexion à la base de données
+2023-06-07 07:35:17 - Pas de compte existant avec [laurie.jeham@ynov.com]
+2023-06-07 07:35:17 - Le compte va se créer dans la table accounttmp
+2023-06-07 07:35:17 - User::CreateUser du compte [laurie.jeham@ynov.com]
+2023-06-07 07:35:17 - Connexion à la base de données
+2023-06-07 07:40:18 - Connexion à la base de données
+2023-06-07 07:40:18 - User::GetAccountByMail du compte [laurie.jeham@ynov.com]
+2023-06-07 07:40:18 - Connexion à la base de données
+2023-06-07 07:40:18 - Pas de compte existant avec [laurie.jeham@ynov.com]
+2023-06-07 07:40:18 - Le compte va se créer dans la table accounttmp
+2023-06-07 07:40:18 - User::CreateUser du compte [laurie.jeham@ynov.com]
+2023-06-07 07:40:18 - Connexion à la base de données
+2023-06-07 07:42:05 - Connexion à la base de données
+2023-06-07 07:42:05 - User::GetAccountByMail du compte [popo@hotmail.fr]
+2023-06-07 07:42:05 - Connexion à la base de données
+2023-06-07 07:42:05 - Pas de compte existant avec [popo@hotmail.fr]
+2023-06-07 07:42:05 - Le compte va se créer dans la table accounttmp
+2023-06-07 07:42:05 - User::CreateUser du compte [popo@hotmail.fr]
+2023-06-07 07:42:05 - Connexion à la base de données
+2023-06-07 07:42:05 - Connexion à la base de données
+2023-06-07 07:44:03 - Connexion à la base de données
+2023-06-07 07:44:03 - User::GetAccountByMail du compte [popo@hotmail.fr]
+2023-06-07 07:44:03 - Connexion à la base de données
+2023-06-07 07:44:03 - Utilisateur créé
+2023-06-07 07:45:20 - Connexion à la base de données
+2023-06-07 07:45:20 - User::GetAccountByMail du compte [popo@hotmail.fr]
+2023-06-07 07:45:20 - Connexion à la base de données
+2023-06-07 07:45:20 - Pas de compte existant avec [popo@hotmail.fr]
+2023-06-07 07:45:20 - Le compte va se créer dans la table accounttmp
+2023-06-07 07:45:20 - User::CreateUser du compte [popo@hotmail.fr]
+2023-06-07 07:45:20 - Connexion à la base de données
+2023-06-07 07:45:20 - Connexion à la base de données
+2023-06-07 07:46:38 - Connexion à la base de données
+2023-06-07 07:46:38 - User::GetAccountByMail du compte [popo@hotmail.fr]
+2023-06-07 07:46:38 - Connexion à la base de données
+2023-06-07 07:46:38 - Utilisateur créé
+2023-06-07 07:46:44 - Connexion à la base de données
+2023-06-07 07:46:44 - User::GetAccountByMail du compte [nathalie.pascal-racine@cegetel.net]
+2023-06-07 07:46:44 - Connexion à la base de données
+2023-06-07 07:46:44 - Pas de compte existant avec [nathalie.pascal-racine@cegetel.net]
+2023-06-07 07:46:44 - Le compte va se créer dans la table accounttmp
+2023-06-07 07:46:44 - User::CreateUser du compte [nathalie.pascal-racine@cegetel.net]
+2023-06-07 07:46:44 - Connexion à la base de données
+2023-06-07 07:46:44 - Connexion à la base de données
+2023-06-07 07:54:04 - Connexion à la base de données
+2023-06-07 07:54:04 - User::GetAccountByMail du compte [laurie.jeham@ynov.com]
+2023-06-07 07:54:04 - Connexion à la base de données
+2023-06-07 07:54:04 - Pas de compte existant avec [laurie.jeham@ynov.com]
+2023-06-07 07:54:04 - Le compte va se créer dans la table accounttmp
+2023-06-07 07:54:04 - User::CreateUser du compte [laurie.jeham@ynov.com]
+2023-06-07 07:54:04 - Connexion à la base de données
+2023-06-07 07:54:04 - Connexion à la base de données
+2023-06-07 07:54:27 - Connexion à la base de données
+2023-06-07 07:54:27 - User::GetAccountByMail du compte [laurie.jeham@hotmail.fr]
+2023-06-07 07:54:27 - Connexion à la base de données
+2023-06-07 07:54:27 - Pas de compte existant avec [laurie.jeham@hotmail.fr]
+2023-06-07 07:54:27 - Le compte va se créer dans la table accounttmp
+2023-06-07 07:54:27 - User::CreateUser du compte [laurie.jeham@hotmail.fr]
+2023-06-07 07:54:27 - Connexion à la base de données
+2023-06-07 07:54:27 - Connexion à la base de données
+2023-06-07 07:54:27 - Connexion à la base de données
+2023-06-07 07:54:27 - Connexion à la base de données
+2023-06-07 08:45:22 - Les mots de passe ne correspondent pas
+2023-06-07 08:45:27 - Connexion à la base de données
+2023-06-07 08:45:27 - User::GetAccountByMail du compte [laurie.jeham@ynov.com]
+2023-06-07 08:45:27 - Connexion à la base de données
+2023-06-07 08:45:27 - Pas de compte existant avec [laurie.jeham@ynov.com]
+2023-06-07 08:45:27 - Le compte va se créer dans la table accounttmp
+2023-06-07 08:45:27 - User::CreateUser du compte [laurie.jeham@ynov.com]
+2023-06-07 08:45:27 - Connexion à la base de données
+2023-06-07 08:45:27 - Connexion à la base de données
+2023-06-07 08:45:27 - Connexion à la base de données
+2023-06-07 08:45:27 - Connexion à la base de données
+2023-06-07 09:01:56 - Connexion à la base de données
+2023-06-07 09:01:56 - User::GetAccountByMail du compte [laurie.jeham@ynov.com]
+2023-06-07 09:01:56 - Connexion à la base de données
+2023-06-07 09:01:56 - Pas de compte existant avec [laurie.jeham@ynov.com]
+2023-06-07 09:01:56 - Le compte va se créer dans la table accounttmp
+2023-06-07 09:01:56 - User::CreateUser du compte [laurie.jeham@ynov.com]
+2023-06-07 09:01:56 - Connexion à la base de données
+2023-06-07 09:01:56 - Connexion à la base de données
+2023-06-07 09:01:56 - Connexion à la base de données
+2023-06-07 09:01:56 - Connexion à la base de données
+2023-06-07 09:06:55 - Connexion à la base de données
+2023-06-07 09:06:55 - User::GetAccountByMail du compte [laurie.jeham@ynov.com]
+2023-06-07 09:06:55 - Connexion à la base de données
+2023-06-07 09:06:55 - Utilisateur créé
+2023-06-07 09:06:59 - Connexion à la base de données
+2023-06-07 09:06:59 - User::GetAccountByMail du compte [popo@hotmail.fr]
+2023-06-07 09:06:59 - Connexion à la base de données
+2023-06-07 09:06:59 - Pas de compte existant avec [popo@hotmail.fr]
+2023-06-07 09:06:59 - Le compte va se créer dans la table accounttmp
+2023-06-07 09:06:59 - User::CreateUser du compte [popo@hotmail.fr]
+2023-06-07 09:06:59 - Connexion à la base de données
+2023-06-07 09:06:59 - Connexion à la base de données
+2023-06-07 09:06:59 - Connexion à la base de données
+2023-06-07 09:06:59 - Connexion à la base de données
+2023-06-07 09:08:45 - L'email n'est pas valide
+2023-06-07 09:08:50 - Connexion à la base de données
+2023-06-07 09:08:50 - User::GetAccountByMail du compte [laurie.jeham@ynov.com]
+2023-06-07 09:08:50 - Connexion à la base de données
+2023-06-07 09:08:50 - Pas de compte existant avec [laurie.jeham@ynov.com]
+2023-06-07 09:08:50 - Le compte va se créer dans la table accounttmp
+2023-06-07 09:08:50 - User::CreateUser du compte [laurie.jeham@ynov.com]
+2023-06-07 09:08:50 - Connexion à la base de données
+2023-06-07 09:08:50 - Connexion à la base de données
+2023-06-07 09:08:50 - Connexion à la base de données
+2023-06-07 09:08:50 - Connexion à la base de données
+2023-06-07 09:20:29 - Connexion à la base de données
+2023-06-07 09:20:29 - User::GetAccountByMail du compte [laurie.jeham@ynov.com]
+2023-06-07 09:20:29 - Connexion à la base de données
+2023-06-07 09:20:29 - Utilisateur créé
+2023-06-07 09:20:34 - Connexion à la base de données
+2023-06-07 09:20:34 - User::GetAccountByMail du compte [draculastarwhite@gmail.com]
+2023-06-07 09:20:34 - Connexion à la base de données
+2023-06-07 09:20:34 - Pas de compte existant avec [draculastarwhite@gmail.com]
+2023-06-07 09:20:34 - User::CreateUser du compte [draculastarwhite@gmail.com]
+2023-06-07 09:20:34 - Connexion à la base de données
+2023-06-07 09:20:34 - Le compte va se créer dans la table accounttmp
+2023-06-07 09:20:34 - Connexion à la base de données
+2023-06-07 09:20:34 - Connexion à la base de données
+2023-06-07 09:22:20 - Les mots de passe ne correspondent pas
+2023-06-07 09:22:25 - Connexion à la base de données
+2023-06-07 09:22:25 - User::GetAccountByMail du compte [draculastarwhite@gmail.com]
+2023-06-07 09:22:25 - Connexion à la base de données
+2023-06-07 09:22:25 - Utilisateur créé
+2023-06-07 09:22:32 - Connexion à la base de données
+2023-06-07 09:22:32 - User::GetAccountByMail du compte [popo@hotmail.fr]
+2023-06-07 09:22:32 - Connexion à la base de données
+2023-06-07 09:22:32 - Pas de compte existant avec [popo@hotmail.fr]
+2023-06-07 09:22:32 - User::CreateUser du compte [popo@hotmail.fr]
+2023-06-07 09:22:32 - Connexion à la base de données
+2023-06-07 09:22:32 - Le compte va se créer dans la table accounttmp
+2023-06-07 09:22:32 - Connexion à la base de données
+2023-06-07 09:22:32 - Connexion à la base de données
+2023-06-07 09:24:47 - Connexion à la base de données
+2023-06-07 09:24:47 - User::GetAccountByMail du compte [laurie.jeham@ynov.com]
+2023-06-07 09:24:47 - Connexion à la base de données
+2023-06-07 09:24:47 - Pas de compte existant avec [laurie.jeham@ynov.com]
+2023-06-07 09:24:47 - User::CreateUser du compte [laurie.jeham@ynov.com]
+2023-06-07 09:24:47 - Connexion à la base de données
+2023-06-07 09:24:47 - Le compte va se créer dans la table accounttmp
+2023-06-07 09:24:47 - Connexion à la base de données
+2023-06-07 09:24:47 - Connexion à la base de données
+2023-06-07 09:24:47 - Connexion à la base de données
+2023-06-07 09:34:44 - Connexion à la base de données
+2023-06-07 09:34:44 - User::GetAccountByMail du compte [draculastarwhite@gmail.com]
+2023-06-07 09:34:44 - Connexion à la base de données
+2023-06-07 09:34:44 - Pas de compte existant avec [draculastarwhite@gmail.com]
+2023-06-07 09:34:44 - User::CreateUser du compte [draculastarwhite@gmail.com]
+2023-06-07 09:34:44 - Connexion à la base de données
+2023-06-07 09:34:44 - Le compte va se créer dans la table accounttmp
+2023-06-07 09:34:44 - Connexion à la base de données
+2023-06-07 09:34:44 - Connexion à la base de données
+2023-06-07 09:34:44 - Connexion à la base de données
+2023-06-07 09:35:34 - Connexion à la base de données
+2023-06-07 09:35:34 - User::GetAccountByMail du compte [popo@hotmail.fr]
+2023-06-07 09:35:34 - Connexion à la base de données
+2023-06-07 09:35:34 - Pas de compte existant avec [popo@hotmail.fr]
+2023-06-07 09:35:34 - User::CreateUser du compte [popo@hotmail.fr]
+2023-06-07 09:35:34 - Connexion à la base de données
+2023-06-07 09:35:34 - Le compte va se créer dans la table accounttmp
+2023-06-07 09:35:34 - Connexion à la base de données
+2023-06-07 09:35:34 - Connexion à la base de données
+2023-06-07 09:35:34 - Connexion à la base de données
+2023-06-07 09:35:34 - Connexion à la base de données
+2023-06-07 09:36:22 - Connexion à la base de données
+2023-06-07 09:36:22 - User::GetAccountByMail du compte [laurie.jeham@ynov.com]
+2023-06-07 09:36:22 - Connexion à la base de données
+2023-06-07 09:36:22 - Pas de compte existant avec [laurie.jeham@ynov.com]
+2023-06-07 09:36:22 - User::CreateUser du compte [laurie.jeham@ynov.com]
+2023-06-07 09:36:22 - Connexion à la base de données
+2023-06-07 09:36:22 - Le compte va se créer dans la table accounttmp
+2023-06-07 09:36:22 - Connexion à la base de données
+2023-06-07 09:36:22 - Connexion à la base de données
+2023-06-07 09:36:22 - Connexion à la base de données
+2023-06-07 09:36:22 - Connexion à la base de données
+2023-06-07 09:46:13 - Connexion à la base de données
+2023-06-07 09:46:13 - User::GetAccountByMail du compte [laurie.jeham@ynov.com]
+2023-06-07 09:46:13 - Connexion à la base de données
+2023-06-07 09:46:13 - Pas de compte existant avec [laurie.jeham@ynov.com]
+2023-06-07 09:46:13 - User::CreateUser du compte [laurie.jeham@ynov.com]
+2023-06-07 09:46:13 - Connexion à la base de données
+2023-06-07 09:46:13 - Le compte va se créer dans la table accounttmp
+2023-06-07 09:46:13 - Connexion à la base de données
+2023-06-07 09:46:13 - Connexion à la base de données
+2023-06-07 09:46:13 - Connexion à la base de données
+2023-06-07 09:46:13 - Connexion à la base de données
+2023-06-07 09:48:20 - Connexion à la base de données
+2023-06-07 09:48:20 - User::GetAccountByMail du compte [draculastarwhite@gmail.com]
+2023-06-07 09:48:20 - Connexion à la base de données
+2023-06-07 09:48:20 - Pas de compte existant avec [draculastarwhite@gmail.com]
+2023-06-07 09:48:20 - User::CreateUser du compte [draculastarwhite@gmail.com]
+2023-06-07 09:48:20 - Connexion à la base de données
+2023-06-07 09:48:20 - Le compte va se créer dans la table accounttmp
+2023-06-07 09:48:20 - Connexion à la base de données
+2023-06-07 09:48:20 - Connexion à la base de données
+2023-06-07 09:48:20 - Connexion à la base de données
+2023-06-07 09:48:20 - Connexion à la base de données
+2023-06-07 09:49:27 - Connexion à la base de données
+2023-06-07 09:49:27 - User::GetAccountByMail du compte [dracdstarwhite@gmail.com]
+2023-06-07 09:49:27 - Connexion à la base de données
+2023-06-07 09:49:27 - Pas de compte existant avec [dracdstarwhite@gmail.com]
+2023-06-07 09:49:27 - User::CreateUser du compte [dracdstarwhite@gmail.com]
+2023-06-07 09:49:27 - Connexion à la base de données
+2023-06-07 09:49:27 - Le compte va se créer dans la table accounttmp
+2023-06-07 09:49:27 - Connexion à la base de données
+2023-06-07 09:49:27 - Connexion à la base de données
+2023-06-07 09:49:27 - Connexion à la base de données
+2023-06-07 09:49:27 - Connexion à la base de données
+2023-06-07 09:50:09 - Connexion à la base de données
+2023-06-07 09:50:09 - User::GetAccountByMail du compte [nathalie.pascal-racine@cegetel.net]
+2023-06-07 09:50:09 - Connexion à la base de données
+2023-06-07 09:50:09 - Pas de compte existant avec [nathalie.pascal-racine@cegetel.net]
+2023-06-07 09:50:09 - User::CreateUser du compte [nathalie.pascal-racine@cegetel.net]
+2023-06-07 09:50:09 - Connexion à la base de données
+2023-06-07 09:50:09 - Le compte va se créer dans la table accounttmp
+2023-06-07 09:50:09 - Connexion à la base de données
+2023-06-07 09:50:09 - Connexion à la base de données
+2023-06-07 09:50:09 - Connexion à la base de données
+2023-06-07 09:50:09 - Connexion à la base de données
+2023-06-07 09:50:40 - Connexion à la base de données
+2023-06-07 09:50:40 - User::GetAccountByMail du compte [popo@hotmail.fr]
+2023-06-07 09:50:40 - Connexion à la base de données
+2023-06-07 09:50:40 - Pas de compte existant avec [popo@hotmail.fr]
+2023-06-07 09:50:40 - User::CreateUser du compte [popo@hotmail.fr]
+2023-06-07 09:50:40 - Connexion à la base de données
+2023-06-07 09:50:40 - Le compte va se créer dans la table accounttmp
+2023-06-07 09:50:40 - Connexion à la base de données
+2023-06-07 09:50:40 - Connexion à la base de données
+2023-06-07 09:50:40 - Connexion à la base de données
+2023-06-07 09:50:40 - Connexion à la base de données
+2023-06-07 09:52:36 - Connexion à la base de données
+2023-06-07 09:52:36 - User::GetAccountByMail du compte [laurie.jeham@hotmail.fr]
+2023-06-07 09:52:36 - Connexion à la base de données
+2023-06-07 09:52:36 - Pas de compte existant avec [laurie.jeham@hotmail.fr]
+2023-06-07 09:52:36 - User::CreateUser du compte [laurie.jeham@hotmail.fr]
+2023-06-07 09:52:36 - Connexion à la base de données
+2023-06-07 09:52:36 - Le compte va se créer dans la table accounttmp
+2023-06-07 09:52:36 - Connexion à la base de données
+2023-06-07 09:52:36 - Connexion à la base de données
+2023-06-07 09:57:26 - Connexion à la base de données
+2023-06-07 09:57:26 - User::GetAccountByMail du compte [nathalie.pascal-racine@cegetel.net]
+2023-06-07 09:57:26 - Connexion à la base de données
+2023-06-07 09:57:26 - Utilisateur créé
+2023-06-07 09:57:31 - Connexion à la base de données
+2023-06-07 09:57:31 - User::GetAccountByMail du compte [draculastarwhite@gmail.com]
+2023-06-07 09:57:31 - Connexion à la base de données
+2023-06-07 09:57:31 - Utilisateur créé
+2023-06-07 09:58:01 - Connexion à la base de données
+2023-06-07 09:58:01 - User::GetAccountByMail du compte [laurie.jeham@ynov.com]
+2023-06-07 09:58:01 - Connexion à la base de données
+2023-06-07 09:58:01 - Pas de compte existant avec [laurie.jeham@ynov.com]
+2023-06-07 09:58:01 - User::CreateUser du compte [laurie.jeham@ynov.com]
+2023-06-07 09:58:01 - Connexion à la base de données
+2023-06-07 09:58:01 - Le compte va se créer dans la table accounttmp
+2023-06-07 09:58:01 - Connexion à la base de données
+2023-06-07 09:58:01 - Connexion à la base de données
+2023-06-07 09:58:01 - Connexion à la base de données
+2023-06-07 09:58:01 - Connexion à la base de données
+2023-06-07 10:06:47 - Connexion à la base de données
+2023-06-07 10:06:47 - User::GetAccountByMail du compte [laurie.jeham@hotmail.fr]
+2023-06-07 10:06:47 - Connexion à la base de données
+2023-06-07 10:06:47 - Pas de compte existant avec [laurie.jeham@hotmail.fr]
+2023-06-07 10:06:47 - User::CreateUser du compte [laurie.jeham@hotmail.fr]
+2023-06-07 10:06:47 - Connexion à la base de données
+2023-06-07 10:06:47 - Le compte va se créer dans la table accounttmp
+2023-06-07 10:06:47 - Connexion à la base de données
+2023-06-07 10:06:47 - Connexion à la base de données
+2023-06-07 10:06:47 - Connexion à la base de données
+2023-06-07 10:07:26 - Connexion à la base de données
+2023-06-07 10:07:26 - User::GetAccountByMail du compte [popo@hotmail.fr]
+2023-06-07 10:07:26 - Connexion à la base de données
+2023-06-07 10:07:26 - Pas de compte existant avec [popo@hotmail.fr]
+2023-06-07 10:07:26 - User::CreateUser du compte [popo@hotmail.fr]
+2023-06-07 10:07:26 - Connexion à la base de données
+2023-06-07 10:07:26 - Le compte va se créer dans la table accounttmp
+2023-06-07 10:07:26 - Connexion à la base de données
+2023-06-07 10:07:26 - Connexion à la base de données
+2023-06-07 10:07:26 - Connexion à la base de données
+2023-06-07 10:07:26 - Connexion à la base de données
+2023-06-07 10:09:20 - Connexion à la base de données
+2023-06-07 10:09:20 - User::GetAccountByMail du compte [laurie.jeham@ynov.com]
+2023-06-07 10:09:20 - Connexion à la base de données
+2023-06-07 10:09:20 - Utilisateur créé
+2023-06-07 10:09:26 - Connexion à la base de données
+2023-06-07 10:09:26 - User::GetAccountByMail du compte [nathalie.pascal-racine@cegetel.net]
+2023-06-07 10:09:26 - Connexion à la base de données
+2023-06-07 10:09:26 - Pas de compte existant avec [nathalie.pascal-racine@cegetel.net]
+2023-06-07 10:09:26 - User::CreateUser du compte [nathalie.pascal-racine@cegetel.net]
+2023-06-07 10:09:26 - Connexion à la base de données
+2023-06-07 10:09:26 - Le compte va se créer dans la table accounttmp
+2023-06-07 10:09:26 - Connexion à la base de données
+2023-06-07 10:09:26 - Connexion à la base de données
+2023-06-07 10:09:26 - Connexion à la base de données
+2023-06-07 10:11:30 - Connexion à la base de données
+2023-06-07 10:11:30 - User::GetAccountByMail du compte [laurie.jeham@ynov.com]
+2023-06-07 10:11:30 - Connexion à la base de données
+2023-06-07 10:11:30 - Pas de compte existant avec [laurie.jeham@ynov.com]
+2023-06-07 10:11:30 - User::CreateUser du compte [laurie.jeham@ynov.com]
+2023-06-07 10:11:30 - Connexion à la base de données
+2023-06-07 10:11:30 - Le compte va se créer dans la table accounttmp
+2023-06-07 10:11:30 - Connexion à la base de données
+2023-06-07 10:11:30 - Connexion à la base de données
+2023-06-07 10:11:30 - Connexion à la base de données
+2023-06-07 10:11:30 - Connexion à la base de données
+2023-06-07 13:13:18 - Connexion à la base de données
+2023-06-07 13:13:18 - User::GetAccountByMail du compte [laurie.jeham@hotmail.fr]
+2023-06-07 13:13:18 - Connexion à la base de données
+2023-06-07 13:13:18 - Pas de compte existant avec [laurie.jeham@hotmail.fr]
+2023-06-07 13:13:18 - User::CreateUser du compte [laurie.jeham@hotmail.fr]
+2023-06-07 13:13:18 - Connexion à la base de données
+2023-06-07 13:13:18 - Le compte va se créer dans la table accounttmp
+2023-06-07 13:13:18 - Connexion à la base de données
+2023-06-07 13:13:18 - Connexion à la base de données
+2023-06-07 13:13:18 - Connexion à la base de données
+2023-06-07 13:13:18 - Connexion à la base de données
+2023-06-07 13:23:57 - Connexion à la base de données
+2023-06-07 13:23:57 - User::GetAccountByMail du compte [draculastarwhite@gmail.com]
+2023-06-07 13:23:57 - Connexion à la base de données
+2023-06-07 13:23:57 - Pas de compte existant avec [draculastarwhite@gmail.com]
+2023-06-07 13:23:57 - User::CreateUser du compte [draculastarwhite@gmail.com]
+2023-06-07 13:23:57 - Connexion à la base de données
+2023-06-07 13:23:57 - Le compte va se créer dans la table accounttmp
+2023-06-07 13:23:57 - Connexion à la base de données
+2023-06-07 13:23:57 - Connexion à la base de données
+2023-06-07 13:23:57 - Connexion à la base de données
+2023-06-07 13:23:57 - Connexion à la base de données

@@ -100,4 +100,11 @@ Class users
         $statement->bindParam(':email', $email);
         $statement->execute();
     }
+
+    public static function deleteUser(string $guid) {
+        $query = "DELETE FROM users WHERE guid = :guid";
+        $statement = (new database())->getConnection()->prepare($query);
+        $statement->bindParam(':guid', $guid);
+        $statement->execute();
+    }
 }

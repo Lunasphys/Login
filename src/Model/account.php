@@ -8,6 +8,8 @@ use Log\log;
 use Users\users;
 use Account_otp\account_otp;
 
+require_once __DIR__ . "/account_otp.php";
+
 
 class account {
     // Variable
@@ -27,7 +29,7 @@ class account {
     //Récupère le guid et le met dans account
 
     public static function getGUID(): string {
-        $guid = uniqid(32);
+        $guid = uniqid();
         return $guid;
     }
 
@@ -54,8 +56,6 @@ class account {
             $db->testConnection();
 
             // Génère le GUID unique
-
-
 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $email = $_POST['email'];
@@ -85,20 +85,27 @@ class account {
 
                 // Coconnexion bdd
 
-                try {
-                    $link = $db->getConnection();
-                } catch (Exception $e) {
-                    // Erreur de coconnexion
-                }
                 echo "je suis là";
+
+
+
+                // Insère l'email dans la table users en utilisant la méthode CreateUser
+
+                users::CreateUser($guid, $email);
 
                 new log ("Le compte va se créer dans la table accounttmp");
 
-                $stmt = $db->getConnection()->prepare("INSERT INTO `accounttmp` (guid, password, salt) VALUES (?, ?, ?)");
-                $stmt->bindValue(1, $guid);
-                $stmt->bindValue(2, $password);
-                $stmt->bindValue(3, $salt);
-                $stmt->execute();
+                $query = "INSERT INTO accounttmp (guid,  password, salt) VALUES (:guid, :password, :salt)";
+                $statement = (new database())->getConnection()->prepare($query);
+
+                if ($statement === false) {
+                    throw new Exception("Erreur database");
+                }
+
+                $statement->bindParam(':guid', $guid);
+                $statement->bindParam(':password', $hashedPassword);
+                $statement->bindParam(':salt', $salt);
+                $statement->execute();
 
                 echo "Compte créé dans tmp";
 
@@ -113,23 +120,7 @@ class account {
 
                 account_otp::createOTP($guid, $otp, $validity);
 
-                // Insère l'email dans la table users en utilisant la méthode CreateUser
 
-                users::CreateUser($guid, $email);
-
-
-                // Insère les autres données dans la table account
-
-                $stmt1 = $link->prepare("INSERT INTO account (guid, password, salt) VALUES (?, ?, ?)");
-                $stmt1->bindParam(1, $guid);
-                $stmt1->bindParam(2, $hashedPassword);
-                $stmt1->bindParam(3, $salt);
-                $stmt1->execute();
-                $stmt1->closeCursor();
-
-                // Ferme la connexion
-
-                $link = null;
 
                 echo "Nouveaux enregistrements créés avec succès.";
                 return true;
@@ -201,25 +192,16 @@ class account {
                 echo "OTP confirmé";
                 account_otp::createOTP($guid, $otp, $result['validity']);
 
-                // Donne les droits à l'utilisateur
+                // Déplace les informations du compte de la table accounttmp à la table account
 
-                $stmtAccount = $db->getConnection()->prepare("INSERT INTO account (guid, password, salt) SELECT guid, password, salt FROM accounttmp WHERE guid = ?");
-                $stmtAccount->bindValue(1, $guid);
-                $stmtAccount->execute();
+                if(account::moveAccountFromTmp($guid)) {
+                    echo "Nouveaux enregistrements créés avec succès.";
+                }
+                else
+                {
+                    echo "Erreur lors du déplacement du compte de la table temporaire.";
+                }
 
-                // Crée l'utilisateur dans la table users
-
-                $stmtUsers = $db->getConnection()->prepare("INSERT INTO users (guid, email) VALUES (?, ?)");
-                $stmtUsers->bindValue(1, $guid);
-                $stmtUsers->execute();
-
-                // Supprime l'OTP de la table accountotp
-
-                $stmtDelete = $db->getConnection()->prepare("DELETE FROM accounttmp WHERE guid = ?");
-                $stmtDelete->bindValue(1, $guid);
-                $stmtDelete->execute();
-
-                echo "Nouveaux enregistrements créés avec succès.";
             }
             else
             {
@@ -230,5 +212,26 @@ class account {
         {
             echo "L'OTP n'est pas valide.";
         }
+    }
+
+    public static function moveAccountFromTmp(string $guid) : bool {
+        $db = new database();
+
+        // Déplace les informations du compte de la table accounttmp à la table account
+
+        $query = "INSERT INTO account (guid, password, salt) SELECT guid, password, salt FROM accounttmp WHERE guid = :guid";
+        $statement = $db->getConnection()->prepare($query);
+        $statement->bindParam(':guid', $guid);
+
+        if($statement->execute()) {
+            // Supprime l'entrée de la table accounttmp
+
+            $query = "DELETE FROM accounttmp WHERE guid = :guid";
+            $statement = $db->getConnection()->prepare($query);
+            $statement->bindParam(':guid', $guid);
+            $statement->execute();
+            return true;
+        }
+        return false;
     }
 }

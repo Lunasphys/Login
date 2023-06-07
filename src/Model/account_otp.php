@@ -29,6 +29,8 @@ class account_otp
         $stmt->bindValue(2, $otp);
         $stmt->bindValue(3, $validity);
         $stmt->execute();
+
+
     }
 
     public static function generateOTP($n): string
@@ -50,6 +52,29 @@ class account_otp
         }
 
         return $result;
+    }
+
+    public static function getOTP(string $guid) : string
+    {
+
+        $db = new database();
+        $db->testConnection();
+
+        $stmt = $db->getConnection()->prepare("SELECT guid, otp, validity FROM accountotp WHERE guid = :guid");
+        $stmt->bindValue(':guid', $guid);
+        $stmt->execute();
+
+        $result = $stmt->fetch();
+
+        // Check if a result was found
+        if ($result === false) {
+            echo "Aucun résultat trouvé";
+        }
+
+        // Cast the result to string and return
+        $otp = (string) $result['otp'];
+
+        return $otp;
     }
 
 }
