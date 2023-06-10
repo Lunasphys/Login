@@ -21,7 +21,7 @@ class database
 
 
         try {
-            $this->connection = new PDO('mysql:host=tpsecu;dbname=login;charset=utf8', 'secu', 'Plerbanix8!');
+            $this->connection = new PDO('mysql:host=;dbname=;charset=utf8', '', '');
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             throw new Exception("Erreur de connexion à la base de données : " . $e->getMessage());
