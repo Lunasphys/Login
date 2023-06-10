@@ -2,17 +2,18 @@
 namespace Account_tmp;
 
 use Database\database;
-use Log\log;
-
+use Exception;
 
 class account_tmp
 {
-    private string $guid;
-    private string $password;
-    private string $salt;
 
+
+
+    public function __construct(string $guid, string $password, string $salt)
+    {
+    }
     public static function CreateAccountTmp(string $guid, string $password, string $salt) {
-        /*$query = "INSERT INTO accounttmp (guid, password, salt) VALUES (:guid, :password, :salt)";
+        $query = "INSERT INTO accounttmp (guid, password, salt) VALUES (:guid, :password, :salt)";
         $statement = (new database())->getConnection()->prepare($query);
 
         if ($statement === false) {
@@ -22,7 +23,7 @@ class account_tmp
         $statement->bindParam(':guid', $guid);
         $statement->bindParam(':password', $password);
         $statement->bindParam(':salt', $salt);
-        $statement->execute();*/
+        $statement->execute();
     }
 
     // Supprime la ligne dans la table accounttmp
@@ -32,5 +33,25 @@ class account_tmp
         $statement = (new database())->getConnection()->prepare($query);
         $statement->bindParam(':guid', $guid);
         $statement->execute();
+    }
+
+    public static function accountTMPtoAccount(string $guid)
+    {
+        $query = "SELECT * FROM accounttmp WHERE guid = :guid";
+        $statement = (new database())->getConnection()->prepare($query);
+        $statement->bindParam(':guid', $guid);
+        $statement->execute();
+        $result = $statement->fetch();
+
+        if ($result) {
+            $query = "INSERT INTO account (guid, password, salt) VALUES (:guid, :password, :salt)";
+            $statement = (new database())->getConnection()->prepare($query);
+            $statement->bindParam(':guid', $result['guid']);
+            $statement->bindParam(':password', $result['password']);
+            $statement->bindParam(':salt', $result['salt']);
+            $statement->execute();
+        } else {
+            return null;
+        }
     }
 }

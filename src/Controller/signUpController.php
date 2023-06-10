@@ -1,80 +1,71 @@
 <?php
 
-namespace SignUp;
+namespace SignUpController;
+
 
 use Account\account;
-use Users\users;
-use Log\log;
-use Exception;
 use Account_otp\account_otp;
+use Account_tmp\account_tmp;
+use Users\users;
+
 
 class signUpController
 {
     /**
-     * @throws Exception
+     * @throws \Exception
      */
     public static function execute()
     {
+        if ($_SERVER["REQUEST_METHOD"] === 'POST') {
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $password2 = $_POST['password2'];
 
 
-        // Récupération les données du formulaire
 
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $passwordConfirmation = $_POST['password2'];
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                return "Le format de l'e-mail est incorrect";
+            }
 
-        // Verification que l'email soit bien un email et qu'il ne soit pas vide
 
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            new log("L'email n'est pas valide");
-            throw new Exception("L'email n'est pas valide");
+
+            // Verifie si suit les conditions de mot de passe
+
+            if (preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8,}$/', $password)) {
+                // Le mot de passe est valide
+                echo "Mot de passe valide.";
+            } else {
+
+                // Mot de passe non coinforme
+
+                return "Le mot de passe doit contenir au moins une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial.";
+            }
+
+
+            if ($password !== $password2) {
+                return "Les mots de passe ne correspondent pas";
+            }
+            $user = users::GetAccountByMail($email);
+            if ($user !== null) {
+                return "Un compte existe déjà avec cet email";
+            } else {
+                $salt = account::generateSalt();
+                $saltPassword = $password . $salt;
+                $hashedPassword = hash('sha512', $saltPassword);
+                $guid = users::getGUID();
+                users::CreateUser($guid, $email);
+                account_tmp::CreateAccountTmp($guid, $hashedPassword, $salt);
+
+                echo "Tmp créé";
+                $validity = date('Y-m-d H:i:s', strtotime('+1 minute'));
+                $otp = account_otp::generateOTP(6);
+                account_otp::createOTP($guid, $otp, $validity);
+                setcookie("otp", $otp, time() + 60); // 60 secondes = 1 minute
+                setcookie("guid", $guid, time() + 3600);
+                header('Location: ../../Template/otpVerification.php');
+                exit();
+            }
         }
-
-        // Vérification des mots de passe
-
-        if ($password !== $passwordConfirmation) {
-
-            new log("Les mots de passe ne correspondent pas");
-            throw new Exception("Les mots de passe ne correspondent pas");
-        }
-
-        // Récupération de la ligne gud
-
-        $guid = account::getGUID();
-
-
-        $response = null;
-
-        // Salage du mot de passe
-
-        $result = account::SaltPwd($password);
-        $hashedPassword = $result['password'];
-        $salt = $result['salt'];
-
-
-        echo "Youhou mot de passe salé : " . $hashedPassword;
-
-        // Appel de la méthode createAccount pour créer l'account temporaire
-
-
-        $success = account::createAccount();
-
-        if ($success) {
-            $otp = account_otp::getOTP($guid);
-
-            $_SESSION['otp'] = $otp; // Save OTP to a session variable
-
-            account::confirmOTP($guid, $otp);
-
-            // Redirection to the login page with the OTP in the URL
-
-            echo "reussi";
-            exit();
-
-        }
-        else
-        {
-            echo "La création du compte a échoué.";
-        }
+        exit();
     }
 }

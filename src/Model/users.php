@@ -2,109 +2,116 @@
 
 namespace Users;
 
-use Log\log;
+
 use Database\database;
 use Exception;
 
-Class users
+class users
 {
-    // Variable
     private string $guid;
     private string $email;
 
-    // Constructor
     public function __construct(string $guid, string $email)
     {
-        $this->guid = $guid;
-        $this->email = $email;
-        new log ("Utilisateur créé");
     }
 
-    /**
-     * @throws Exception
-     */
-    public static function GetAccountById(string $guid): users
+    public static function getGUID(): string
     {
-        // Récupère le guid et le met dans account
+        mt_srand((double)microtime() * 10000);
+        $charid = strtoupper(uniqid(rand(), true));
+        return substr($charid, 0, 8) . '-' .
+            substr($charid, 8, 4) . '-' .
+            substr($charid, 12, 4) . '-' .
+            substr($charid, 16, 4) . '-' .
+            substr($charid, 20, 12);
+    }
 
-        new log ("User::GetAccountById du compte [" . $guid . "]");
+    public static function GetAccountByMail(string $email): ?users
+    {
 
-        $query = "SELECT * FROM users WHERE guid = :guid";
+
+        $query = "SELECT * FROM `users` WHERE `email` = ?";
         $statement = (new database())->getConnection()->prepare($query);
 
         if ($statement === false) {
-            new log ("user::GetAccountById du compte [" . $guid . "]");
+
             throw new Exception("Erreur database");
         }
 
-        $statement->bindParam(':guid', $guid);
+        $statement->bindValue(1, $email);
         $statement->execute();
         $result = $statement->fetch();
 
         if ($result) {
             return new users($result['guid'], $result['email']);
         } else {
-            throw new Exception("erreur de fetch");
-        }
-    }
 
-    /**
-     * @throws Exception
-     */
-    public static function GetAccountByMail(string $email): ?users
-    {
-
-        // Permet de récupérer le compte par son email
-
-        new log ("User::GetAccountByMail du compte [" . $email . "]");
-
-        $query = "SELECT * FROM users WHERE email = :email";
-        $statement = (new database())->getConnection()->prepare($query);
-
-        if ($statement === false) {
-            new log ("users::GetAccountByMail du compte [" . $email . "]");
-            throw new Exception("Erreur database");
-        }
-
-        $statement->bindParam(':email', $email);
-        $statement->execute();
-        $result = $statement->fetch();
-
-        // Si le compte existe, on le retourne, sinon on retourne null
-
-        if ($result) {
-            return new users($result['email'], $result['guid']);
-        } else {
-            new log ("Pas de compte existant avec [" . $email . "]");
             return null;
         }
     }
 
     public static function CreateUser(string $guid, string $email)
     {
-        // Permet de créer une table users
+        // Création du compte
 
-        new log ("User::CreateUser du compte [" . $email . "]");
-        $query = "INSERT INTO users (guid, email) VALUES (:guid, :email)";
+
+        $query = "INSERT INTO `users` (`guid`, `email`) VALUES (?, ?)";
         $statement = (new database())->getConnection()->prepare($query);
 
+        if ($statement === false) {
 
-        // Si la requête ne fonctionne pas, on retourne une erreur
+            throw new Exception("Erreur database");
+        }
+
+        $statement->bindValue(1, $guid);
+        $statement->bindValue(2, $email);
+        $statement->execute();
+    }
+
+    public static function deleteUsers(string $guid): bool
+    {
+        $db = new database();
+        $db->testConnection();
+
+        $stmt = $db->getConnection()->prepare("DELETE FROM `users` WHERE `guid` = :guid");
+        $stmt->bindValue(':guid', $guid);
+        $stmt->execute();
+
+        return $stmt->execute();
+    }
+
+
+
+    public static function getGUIDbyMail(string $email): string
+    {
+        $query = "SELECT `guid` FROM `users` WHERE `email` = ?";
+        $statement = (new database())->getConnection()->prepare($query);
+        $statement->bindValue(1, $email);
+        $statement->execute();
+        $result = $statement->fetch();
+        return $result['guid'];
+    }
+
+
+    public static function getPassword(string $guid): ?string
+    {
+        $query = "SELECT password FROM account WHERE guid = :guid";
+        $statement = (new database())->getConnection()->prepare($query);
 
         if ($statement === false) {
-            new log ("User::CreateUser du compte [" . $email . "]");
             throw new Exception("Erreur database");
         }
 
         $statement->bindParam(':guid', $guid);
-        $statement->bindParam(':email', $email);
         $statement->execute();
+        $result = $statement->fetch();
+
+        if ($result) {
+            return $result['password'];
+        } else {
+            return null;
+        }
     }
 
-    public static function deleteUser(string $guid) {
-        $query = "DELETE FROM users WHERE guid = :guid";
-        $statement = (new database())->getConnection()->prepare($query);
-        $statement->bindParam(':guid', $guid);
-        $statement->execute();
-    }
+
 }
